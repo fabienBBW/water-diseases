@@ -4,7 +4,7 @@ function getColor(value) {
         const intensity = value / max;
         return `rgba(255, 0, 0, ${intensity})`;
     }
-    return `rgba(255, 255, 255, 1.0)`;
+    return `rgba(255, 0, 0, 0.0)`;
 }
 
 function addLayer(geojson, mortalityData) {
@@ -13,13 +13,14 @@ function addLayer(geojson, mortalityData) {
         const iso3 = feature.properties["ISO3166-1-Alpha-3"];
         const value = mortalityData[iso3];
 
-        return {
-            fillColor: getColor(value),
-            weight: 1,
-            opacity: 1,
-            color: 'white',
-            fillOpacity: 0.7
-        };
+            return {
+                fillColor: getColor(value),
+                weight: 1,
+                opacity: 1,
+                color: 'white',
+                fillOpacity: 0.7
+            };
+        
     },
     onEachFeature: function (feature, layer) {
       const iso3 = feature.properties["ISO3166-1-Alpha-3"];

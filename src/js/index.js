@@ -20,6 +20,6 @@ fetch("../json-data/countries.geojson")
                 fillOpacity: 0
             }
         }).addTo(window.currentMap);
-        //parseCSV("../csv-disease-data/data.csv", data);
+        parseCSV("../csv-disease-data/data.csv", data);
     });
 

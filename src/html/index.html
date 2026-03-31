@@ -1,17 +1,131 @@
 <!DOCTYPE html>
 <html>
     <head>
+         <meta charset="UTF-8">
         <title>
             Krankheiten - Unaufbereitetes Trinkwasser
         </title>
          <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 
          <link rel="stylesheet" href="../css/style.css" />
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div id="map"></div>
+        <div id="main-heading">
+            <div>
+                Krankheiten durch unaufbereitetes Trinkwasser - Heatmap basierend auf Daten von WHO 2019
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+        <div id="sources-heatmap">
+            Quelle:
+            <a href="https://www.who.int/data/gho/data/indicators/indicator-details/GHO/mortality-rate-attributed-to-exposure-to-unsafe-wash-services-(per-100-000-population)-(sdg-3-9-2)">
+                WHO - GHO - WASH mortality rate 2019
+            </a>
+        </div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
         <script type="module" src="../js/index.js"></script>
+        <hr />
+        <div id="explain-content">
+            <div class="explain-heading">
+                Um welche Krankheiten machen sich Leute sorgen in verschiedenen Ländern, im Kontext von unaufbereitetem Trinkwasser?
+            </div>
+            <div class="explain-body">
+                In Ländern mit wirklich mangelnder Wasserinfrastruktur, machen sich Leute um die folgenden Krankheiten sorgen:
+                    <ul>
+                        <li>
+                            Cholera 
+                        </li>
+                        <li>Durchfall</li>
+                        <li>Dysentery</li>
+                        <li>Typhoid</li>
+                        <li>Polio</li>
+                    </ul>
+                    <div class="explain-heading">
+                    Cholera 
+                    </div>
+
+                    “Risikogebiete befinden sich in Südostasien, Indien und Indonesien, Vorderasien, Afrika sowie in Mittel- und Südamerika.” 
+                    <ul>
+                        <li>
+                    Infektion durch kontaminiertes Wasser 
+</li>
+<li>
+    Führt zu Durchfall und massiven Flüssigkeitsverlusten 
+</li>
+<li>
+    Ohne Behandlung kann die Krankheit in Stunden zum Tod führen. 
+</li>
+<li>
+    Dehydriert
+</li>
+<li>
+    Müdigkeit 
+    </li>
+    <li>
+
+    Augenringe / müde Augen 
+    </li>
+    <li>
+
+    Extremer durst 
+    </li>
+    </ul>
+    <div class="explain-heading">
+    Dysenterie 
+    </div>
+<ul>
+<li>
+99% der Fälle in Entwicklungsländern 
+</li>
+<li>
+    Durch Bakterien ausgelöste Entzündung des Darmes 
+</li>
+<li>
+    Symptome 
+</li>
+<ul>
+    <li>
+    Starke Bauchschmerzen 
+    </li>
+    <li>
+    Tenesmen 
+    </li>
+    <li>
+    Durchfall
+    </li> 
+    <li>
+    Haut kann ausgetrocknet erscheinen (Mund, Lippen) 
+    </li>
+</ul>
+</ul>
+    Viele Solcher Krankheiten haben Durchfall zufolge, was zu starker Dehydrierung und ohne Mittel und medizinische Hilfe zum Tode führen kann.
+    <br/>Quelle: <a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water ">WHO - Drinking Water</a>
+            </div>
+            <div class="explain-heading">
+                Um welche Folgen von unaufbereitetem Trinkwasser machen sich Leute in Ländern mit guter Wasserversorgung Sorgen?
+            </div>
+            <div class="explain-body">
+                Es gibt viele Chemikalien aus der Industrie, die trotz Aufbereitung im Trinkwasser bleiben und den Körper belasten können.
+                Zum Beispiel:
+                <ul>
+                    <li>
+                        Pharmazeutreste
+                    </li>
+                    <li>
+                        PFAs
+                    </li>
+                </ul>
+                Diese Stoffe können zum Beispiel hormonelle Veränderungen im Körper bewirken.
+                <br/>
+                PFAs sind Per- und Polyfluralkylsubstanzen. Diese Stofffamilie umfasst etwa 10.000 chemische Verbindungen.
+                Sie sind extrem langlebig und hartnäckig und können sich im Körper anreichern.
+                <br/>
+                Quelle: <a href="https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/produkte/ewigkeitschemikalien-pfas-wo-sie-stecken-warum-sie-problematisch-sind-81811">verbraucherzentrale.de</a>
+            </div>
+        </div>
     </body>
 </html>
