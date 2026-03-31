@@ -1,0 +1,1 @@
+Copy-Item -Path "../src/*" -Destination C:/xampp/htdocs/water-diseases -Recurse -Force
