@@ -9,7 +9,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 // Load GeoJSON to display countries as shapes.
 // fetch geojson data file.
-fetch("../json-data/countries.geojson")
+fetch("./json-data/countries.geojson")
     .then(res => res.json()) // convert to JSON
     .then(data => { // add to leaflet.
         L.geoJSON(data, {
@@ -20,6 +20,6 @@ fetch("../json-data/countries.geojson")
                 fillOpacity: 0
             }
         }).addTo(window.currentMap);
-        parseCSV("../csv-disease-data/data.csv", data);
+        parseCSV("./csv-disease-data/data.csv", data);
     });
 
